@@ -14,7 +14,8 @@
 				},
 				'msvs_settings': {
 					'VCCLCompilerTool': {
-						'AdditionalOptions': [ '-std:c++17', '/GR' ],
+						'AdditionalOptions': [ '/GR' ],
+						'RuntimeTypeInfo': 'true',
 						'ExceptionHandling': '1',
 					},
 				},

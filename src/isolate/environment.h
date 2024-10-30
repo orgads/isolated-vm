@@ -32,6 +32,8 @@
 
 namespace ivm {
 
+class NativeModule;
+
 /**
  * Wrapper around Isolate with helpers to make working with multiple isolates easier.
  */
@@ -118,7 +120,7 @@ class IsolateEnvironment {
 	public:
 		RemoteHandle<v8::Function> error_handler;
 		std::unordered_multimap<int, struct ModuleInfo*> module_handles;
-		std::unordered_map<class NativeModule*, std::shared_ptr<NativeModule>> native_modules;
+		std::unordered_map<NativeModule*, std::shared_ptr<NativeModule>> native_modules;
 		int terminate_depth = 0;
 		std::atomic<bool> terminated { false };
 
